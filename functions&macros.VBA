@@ -8,7 +8,7 @@ Function AddYearsToDate(yearsToAdd As Double) As Date
     todayDate = Date
     
     ' Split the years into whole years and remaining days
-    wholeYears = Fix(yearsToAdd)
+    wholeYears = Int(yearsToAdd)
     remainingDays = (yearsToAdd - wholeYears) * 365.25
     
     ' Add the whole years to the date
