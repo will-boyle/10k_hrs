@@ -20,6 +20,7 @@ Function AddYearsToDate(yearsToAdd As Double) As Date
     ' Return the new date
     AddYearsToDate = newDate
 End Function
+
 Function PerformCalculation(int1 As Long, int2 As Long, int3 As Long) As Double
     Dim int4 As Long
     Dim int5 As Long
@@ -32,7 +33,7 @@ Function PerformCalculation(int1 As Long, int2 As Long, int3 As Long) As Double
     int6 = 1998
     
     ' Perform the calculation: (int1 * 30 + int2 + int3 * 360) - (int4*30 + int5 + int6 * 360)
-    result = ((int1 * 30 + int2 + int3 * 360) - (int4 * 30 + int5 + int6 * 360)) / 365
+    result = CDbl((int1 * 30 + int2 + int3 * 360) - (int4 * 30 + int5 + int6 * 360)) / 365
     
     ' Return the result
     PerformCalculation = result
